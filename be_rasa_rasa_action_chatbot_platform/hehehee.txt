@@ -1,0 +1,236 @@
+[
+    {
+      "id": "84dd1b7d-d1d2-42ac-9d80-1c2d86329dad",
+      "entity": "ask_weather",
+      "extract_type": "duckling",
+      "keyword": "nay"
+    },
+    {
+      "id": "cb358551-6098-4dcd-ada2-2540fcfd5ad0",
+      "entity": "ask_weather",
+      "extract_type": "duckling",
+      "keyword": "lịch"
+    },
+    {
+      "id": "b2386c25-e0ec-4c85-ad4e-b64b8a81112d",
+      "entity": "ask_weather",
+      "extract_type": "duckling",
+      "keyword": "bữa"
+    },
+    {
+      "id": "9273c4c2-9fb9-45be-b5fe-09c626e1da2d",
+      "entity": "ask_weather",
+      "extract_type": "duckling",
+      "keyword": "hả"
+    },
+    {
+      "id": "929be36a-7f67-48d3-8e49-31e3ee143e76",
+      "entity": "ask_weather",
+      "extract_type": "duckling",
+      "keyword": "ra"
+    },
+    {
+      "id": "47d0992f-beee-46cb-a622-a32a60a10aa0",
+      "entity": "ask_weather",
+      "extract_type": "duckling",
+      "keyword": "dương"
+    },
+    {
+      "id": "6c0463bf-c094-4afd-94ad-7c2b33b543fc",
+      "entity": "Thực  thể",
+      "extract_type": "policy",
+      "keyword": "hế nào?"
+    },
+    {
+      "id": "d627455b-cb12-4d1e-9a4c-4b67c4927477",
+      "entity": "gold",
+      "extract_type": "policy",
+      "keyword": "tiền"
+    },
+    {
+      "id": "5a11e90c-362e-437e-af9e-54fe5ea345aa",
+      "entity": "Thực  thể",
+      "extract_type": "policy",
+      "keyword": "Tỷ trọng"
+    },
+    {
+      "id": "0f0ab23a-04a0-42f1-a764-49bb6240897a",
+      "entity": "Thực  thể",
+      "extract_type": "policy",
+      "keyword": "hôm nay"
+    },
+    {
+      "id": "34f6f7a7-8b21-476e-b1f9-6fc8fb364f37",
+      "entity": "Thực  thể",
+      "extract_type": "policy",
+      "keyword": "giá"
+    },
+    {
+      "id": "47e150f4-4e52-448a-aba0-8097cda00f21",
+      "entity": "name_car_brand",
+      "extract_type": "policy",
+      "keyword": "của"
+    },
+    {
+      "id": "56db2222-9135-4eab-a2c7-f4ef1658c1f3",
+      "entity": "name_car",
+      "extract_type": "policy",
+      "keyword": "n bánh ?"
+    },
+    {
+      "id": "f2c150dc-a35f-4bd6-9159-0521770c8590",
+      "entity": "name_car_brand",
+      "extract_type": "policy",
+      "keyword": "KIA Morning"
+    },
+    {
+      "id": "ae9c51f1-58a3-42e2-8ed7-cd80cbaa40ed",
+      "entity": "company_name",
+      "extract_type": "duckling",
+      "keyword": "thaco"
+    },
+    {
+      "id": "1e2269f8-1064-480c-9fa9-1cfc8e9100ee",
+      "entity": "name_car",
+      "extract_type": "policy",
+      "keyword": "haco?1"
+    },
+    {
+      "id": "88371171-7849-432e-be42-44e2c9b5fa69",
+      "entity": "name_car_brand",
+      "extract_type": "policy",
+      "keyword": "trong t"
+    },
+    {
+      "id": "b101a4b3-697a-4545-a643-ac968a2155c3",
+      "entity": "name_car_brand",
+      "extract_type": "policy",
+      "keyword": "ô tô"
+    },
+    {
+      "id": "7512ce75-d875-4fad-b253-11e008b6b183",
+      "entity": "name_car",
+      "extract_type": "policy",
+      "keyword": "Hỏi xe"
+    },
+    {
+      "id": "1875ff22-db9a-44a6-8b2d-45d98ac778c0",
+      "entity": "name_car_brand",
+      "extract_type": "policy",
+      "keyword": "e ô"
+    },
+    {
+      "id": "1505cd6c-b580-4513-b12f-9391d586431d",
+      "entity": "name_car_brand",
+      "extract_type": "policy",
+      "keyword": "co?"
+    },
+    {
+      "id": "42517e96-a76e-4706-a014-ee2221ee1d53",
+      "entity": "name_car",
+      "extract_type": "policy",
+      "keyword": "trong t"
+    },
+    {
+      "id": "0e038bc1-60e1-449e-a72a-daa79ccfb5c3",
+      "entity": "name_car",
+      "extract_type": "policy",
+      "keyword": "Hỏi x"
+    },
+    {
+      "id": "da5ca553-2d0f-499c-8aae-842a0af5ba3e",
+      "entity": "weather",
+      "extract_type": "policy",
+      "keyword": "%%"
+    },
+    {
+      "id": "cb09ecc8-e6cd-4970-aec4-18f7a13fd3a9",
+      "entity": "weather",
+      "extract_type": "policy",
+      "keyword": "thế"
+    },
+    {
+      "id": "dff5568d-caf2-4b58-832a-115e2e363894",
+      "entity": "weather",
+      "extract_type": "policy",
+      "keyword": "nào? %"
+    },
+    {
+      "id": "357b9f1b-5c19-4059-aaf3-50c6d7b01921",
+      "entity": "weather",
+      "extract_type": "policy",
+      "keyword": "thời tiết"
+    },
+    {
+      "id": "59e57144-094f-455b-a511-02f8a1f8369b",
+      "entity": "weather",
+      "extract_type": "policy",
+      "keyword": "hôm nay"
+    },
+    {
+      "id": "87552f1d-821f-442d-b1cc-232dc7ff61c2",
+      "entity": "weather",
+      "extract_type": "policy",
+      "keyword": "% Hỏi"
+    },
+    {
+      "id": "d7a66191-ddff-4b13-9c0d-6082e130fd22",
+      "entity": "weather",
+      "extract_type": "policy",
+      "keyword": "@@"
+    },
+    {
+      "id": "86bfe927-92e1-4523-90a8-01b1171e83cc",
+      "entity": "weather",
+      "extract_type": "policy",
+      "keyword": "%%"
+    },
+    {
+      "id": "231d71b6-0d68-48b2-8d11-7dc7208aa103",
+      "entity": "weather",
+      "extract_type": "policy",
+      "keyword": "@@"
+    },
+    {
+      "id": "a0b761d2-15c3-4398-86f0-a606b0e40362",
+      "entity": "weather",
+      "extract_type": "policy",
+      "keyword": "publishin"
+    },
+    {
+      "id": "ae99e38e-522b-426d-8a2b-fa2e9d1be6fb",
+      "entity": "health",
+      "extract_type": "policy",
+      "keyword": "andsktop"
+    },
+    {
+      "id": "c34bd5ce-83a8-4e20-81d1-c45f504cf6fe",
+      "entity": "name_car",
+      "extract_type": "policy",
+      "keyword": "passages,"
+    },
+    {
+      "id": "9dd6833b-7198-403c-9ba8-d7424ed44a6d",
+      "entity": "name_car",
+      "extract_type": "policy",
+      "keyword": "sum"
+    },
+    {
+      "id": "92a38273-c8ba-4221-9fde-1a92f5b8102e",
+      "entity": "company_name",
+      "extract_type": "duckling",
+      "keyword": "ey of typ"
+    },
+    {
+      "id": "0b39e4c9-2e3c-48bb-91c7-7cdfda6c8817",
+      "entity": "company_name",
+      "extract_type": "duckling",
+      "keyword": "nter took a g"
+    },
+    {
+      "id": "a75c934a-e48b-4eba-8c23-a3b2a5188a4a",
+      "entity": "health",
+      "extract_type": "policy",
+      "keyword": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown"
+    }
+  ]

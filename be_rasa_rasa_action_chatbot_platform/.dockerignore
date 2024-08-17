@@ -1,0 +1,13 @@
+./.idea
+./.dockerignore
+./create_new_bot_with_id_ingress.py
+./deploy_2app.py
+./deploy_ingress_kind.py
+./Dockerfile.prod
+./dumpdata.txt
+./requirements_backup.txt
+./Dockerfile
+./Dockerfile backup
+./entrypoint.prod.sh
+./models_events.py
+./Jenkinsfile

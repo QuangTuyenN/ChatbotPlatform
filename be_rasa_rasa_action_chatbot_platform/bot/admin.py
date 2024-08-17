@@ -1,0 +1,26 @@
+from django.contrib import admin
+from bot.models import *
+
+admin.site.register(Bot)
+admin.site.register(ChitChat)
+admin.site.register(ChitChatIntentExample)
+admin.site.register(ChitChatUtterExample)
+admin.site.register(Story)
+admin.site.register(Step)
+admin.site.register(Intent)
+admin.site.register(IntentExample)
+admin.site.register(Entity)
+admin.site.register(EntityKeyWord)
+admin.site.register(Vocabulary)
+admin.site.register(Synonym)
+admin.site.register(TextCard)
+admin.site.register(ImageCard)
+admin.site.register(CustomAction)
+admin.site.register(ActionCard)
+admin.site.register(JsonCard)
+admin.site.register(CarouselCard)
+admin.site.register(FormCard)
+admin.site.register(FormSlot)
+admin.site.register(Slot)
+admin.site.register(Button)
+

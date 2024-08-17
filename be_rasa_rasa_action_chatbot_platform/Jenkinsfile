@@ -1,0 +1,113 @@
+pipeline {
+    agent any
+    environment {
+        REPO_PATH = "/be_django"
+        DOCKER_REGISTRY = "docker.io"
+        DOCKERHUB_USERNAME = "teamaithacoindustries2024"
+        APP_NAME = "be_chatbot_v2"
+        IMAGE_TAG = "v${BUILD_NUMBER}"
+        DOCKER_IMAGE_V = "${DOCKERHUB_USERNAME}/${APP_NAME}:${IMAGE_TAG}"
+        DOCKER_IMAGE_LATEST = "${DOCKERHUB_USERNAME}/${APP_NAME}:latest"
+        DOCKER_CREDENTIALS_ID = 'dockerhub'
+        GIT_CREDENTIALS_ID = 'github'
+        HELM_REPO_URL = "https://github.com/Thaco-Industries/cbp-helm-repo.git"
+        HELM_VALUES_FILE = "values.yaml"
+        PATH = "$PATH:/usr/bin"
+    }
+
+    stages {
+        stage('CLEAN WORKSPACE') {
+            steps {
+                script {
+                    cleanWs()
+                }
+            }
+        }
+
+        stage('CHECKOUT SOURCE CODE') {
+            steps {
+                git branch: 'prod',
+                credentialsId: GIT_CREDENTIALS_ID,
+                url: 'https://github.com/Thaco-Industries/ChatbotPlatform_Kubernetes.git'
+            }
+        }
+
+        stage('BUILD IMAGES DOCKER') {
+            steps {
+                script {
+                    docker.build(DOCKER_IMAGE_V, "./be_tiar_chatbot_platform/")
+                }
+            }
+        }
+
+        stage('PUSH IMAGES DOCKERHUB') {
+            steps {
+                script {
+                    docker.withRegistry('', DOCKER_CREDENTIALS_ID) {
+                        docker.image(DOCKER_IMAGE_V).push()
+                        docker.image(DOCKER_IMAGE_V).push("latest")
+                    }
+                }
+            }
+        }
+
+        stage('DELETE IMAGES FROM SERVER CICD') {
+            steps {
+                script {
+                    sh "docker rmi ${DOCKER_IMAGE_V}"
+                    sh "docker rmi ${DOCKER_IMAGE_LATEST}"
+                }
+            }
+        }
+        stage('CHECKOUT HELM REPO') {
+            steps {
+                git branch: 'prod',
+                credentialsId: GIT_CREDENTIALS_ID,
+                url: HELM_REPO_URL
+            }
+        }
+        stage('UPDATE VALUES HELM') {
+            steps {
+                script {
+                    sh """
+                    cd be
+                    ls
+                    sed -i 's|repository:.*|repository: ${DOCKERHUB_USERNAME}/${APP_NAME}|' ${HELM_VALUES_FILE}
+                    sed -i 's|tag:.*|tag: ${IMAGE_TAG}|' ${HELM_VALUES_FILE}
+                    """
+                }
+            }
+        }
+
+        stage('COMMIT AND PUSH CHANGE VALUES HELM REPO') {
+            steps {
+                script {
+                    dir('./cbp-helm-repo') {
+                        sh """
+                        git config user.email "phananhtu1998@gmail.com"
+                        git config user.name "phananhtu1998"
+                        git status
+                        git add ../be/values.yaml
+                        git commit -m "Update file values.yaml helm chart ${DOCKER_IMAGE_V}"
+                        """
+                        withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
+                        sh "git push origin prod"
+                       }
+                    }
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            cleanWs()
+        }
+        success {
+            echo 'SUCCESS!'
+        }
+        failure {
+            echo 'ERROR!'
+        }
+    }
+}

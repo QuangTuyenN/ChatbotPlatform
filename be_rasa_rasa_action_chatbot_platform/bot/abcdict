@@ -1,0 +1,38 @@
+{
+  "id": "016fea5d-626b-49ac-bdf7-ee76d00348ec",
+  "ask_money_exchange_2": [
+    {"text": "giá Đô la Úc hôm nay thế nào nhỉ", "entity": ["name_money"]},
+    {"text": "euro hôm nay ra sao", "entity": ["name_money"]},
+    {"text": "giá usd hôm nay thế nào", "entity": ["name_money"]}
+  ]
+}
+
+
+{
+    "id": "gfgfdgdgdfg45fd4gfd4g5fd4a",
+    "entity": "name_money",
+    "extract_type": "policy",
+    "keyword": ["usd", "euro", "bath"]
+}
+
+
+{
+    "id": "dsfsdfsdfsdfewrwewtrjykjkhgutuy",
+    "text": "cho hỏi giá đô la mỹ",
+    "entity": ["name_money"]
+}
+
+{
+    "id": "gfdgfdhdfhkiuluilukuyu",
+    "entity": "name_money",
+    "extract_type": "policy",
+    "keyword": "usd"
+}
+
+
+
+
+
+
+
+

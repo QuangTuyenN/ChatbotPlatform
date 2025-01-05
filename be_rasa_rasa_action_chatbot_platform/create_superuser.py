@@ -1,17 +1,16 @@
 import os
 import django
 from django.contrib.auth import get_user_model
-# Thiết lập biến môi trường DJANGO_SETTINGS_MODULE
+
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'core.settings')
 
-# Khởi động Django
 django.setup()
 
 User = get_user_model()
 
 superusers = [
-    {'user_name': 'nguyenquangtuyen', 'password': 'thaco@1234', 'email': 'quangtuyennguyen0299@gmail.com'},
-    {'user_name': 'phananhtu', 'password': 'thaco@1234', 'email': 'phananhtu@thaco.com.vn'},
+    {'user_name': '', 'password': '', 'email': ''},
+    {'user_name': '', 'password': '', 'email': ''},
     # Thêm nhiều superuser ở đây
 ]
 
